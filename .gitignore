@@ -26,7 +26,3 @@ coverage
 *.njsproj
 *.sln
 *.sw?
-
-# Tailwind config
-tailwind.config.js
-postcss.config.js
