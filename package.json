@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "codemirror": "^5.65.12",
+    "oh-vue-icons": "^1.0.0-rc3",
+    "pinia": "^2.0.33",
     "vue": "^3.2.47"
   },
   "devDependencies": {
