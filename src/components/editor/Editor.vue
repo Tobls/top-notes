@@ -1,12 +1,22 @@
 <template>
-    <textarea ref="editor" class="h-full w-full">{{ content }}</textarea>
+    <div class="w-full h-full">
+        <textarea ref="editor" class="h-full w-full">{{ content }}</textarea>
+    </div>
 </template>
 
 <script setup>
     import * as CodeMirror from "codemirror";
     import "codemirror/lib/codemirror.css"
-    import "codemirror/theme/abbott.css"
+    import "@/assets/editortheme.css"
+    import "codemirror/addon/selection/active-line.js"
     import "codemirror/mode/gfm/gfm.js"
+    import 'codemirror/addon/fold/foldcode.js';
+    import 'codemirror/addon/fold/foldgutter.js';
+    import 'codemirror/addon/fold/brace-fold.js';
+    import 'codemirror/addon/fold/xml-fold.js';
+    import 'codemirror/addon/fold/indent-fold.js';
+    import 'codemirror/addon/fold/markdown-fold.js';
+    import 'codemirror/addon/fold/comment-fold.js';
     import {onMounted, ref} from "vue";
 
     const props = defineProps({
@@ -18,27 +28,19 @@
         CodeMirror.fromTextArea(editor.value, {
             lineNumbers:  true,
             tabSize: 2,
+            lineWrapping: false,
+            scrollbarStyle: "null",
+            styleActiveLine: { nonEmpty: true },
             autoCloseBrackets: true,
-            theme: "abbott",
+            theme: "tn",
+            foldGutter: true,
+            gutters: ["CodeMirror-foldgutter"],
             mode: "gfm"
         })
     })
 </script>
 <style>
 
-    .CodeMirror {
-        @apply rounded h-full w-full !m-0
-    }
 
-    .cm-strong { font-size: 140%; }
-    .cm-header-1 { font-size: 150%; }
-    .cm-header-2 { font-size: 130%; }
-    .cm-header-3 { font-size: 120%; }
-    .cm-header-4 { font-size: 110%; }
-    .cm-header-5 { font-size: 100%; }
-    .cm-header-6 { font-size: 90%; }
 
-    .cm-strong, .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
-        color: #aaa;
-    }
 </style>

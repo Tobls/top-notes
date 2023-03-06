@@ -3,7 +3,7 @@
         <Header />
         <div class="flex flex-row w-full h-full relative">
             <Sidebar />
-            <Editor />
+            <Editor  :content="content"/>
         </div>
     </div>
 </template>
@@ -12,4 +12,23 @@
     import Editor from "./components/editor/Editor.vue";
     import Header from "./components/header/Header.vue";
     import Sidebar from "./components/sidebar/Sidebar.vue";
+
+    const content = "# test\n" +
+        "## test\n" +
+        "### test\n" +
+        "#### test\n" +
+        "##### test \n" +
+        "###### test\n" +
+        "_test_\n" +
+        "*test*\n" +
+        "~~test~~\n" +
+        "\n" +
+        "=================\n" +
+        "- [ ] Task\n" +
+        "- [x] Done\n" +
+        "List:\n" +
+        " * numbero uni\n" +
+        " * dos\n" +
+        " * tres :smile:\n" +
+        " * `testesefsefsdfsdfs`"
 </script>
