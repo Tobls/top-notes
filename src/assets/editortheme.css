@@ -20,6 +20,22 @@
     z-index: 3;
 }
 
+.CodeMirror-foldmarker {
+    @apply text-white cursor-pointer leading-6 pb-1 text-2xl
+}
+.CodeMirror-foldgutter {
+    width: .7em;
+}
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+    @apply cursor-pointer
+}
+.CodeMirror-foldgutter-open:after {
+    content: "\25BE";
+}
+.CodeMirror-foldgutter-folded:after {
+    content: "\25B8";
+}
 .cm-s-tn .CodeMirror-overwrite .CodeMirror-cursor {
     @apply border-white w-auto
 }
@@ -47,11 +63,11 @@
     @apply bg-brown-light
 }
 
-.cm-s-tn .cm-meta {
+.cm-s-tn .cm-todoOpen {
     @apply text-orange-light
 }
 
-.cm-s-tn .cm-property {
+.cm-s-tn .cm-todoDone {
     @apply text-blue-light
 }
 
@@ -66,22 +82,24 @@
     @apply mr-2
 }
 
-.cm-s-tn .cm-strong, .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
+.cm-s-tn .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
     @apply text-orange-strong
 }
-.CodeMirror-foldmarker {
-    @apply text-white cursor-pointer leading-6 pb-1 text-2xl
+
+.cm-s-tn .cm-cursive {
+    @apply italic
 }
-.CodeMirror-foldgutter {
-    width: .7em;
+
+.cm-s-tn .cm-bold {
+    @apply font-bold
 }
-.CodeMirror-foldgutter-open,
-.CodeMirror-foldgutter-folded {
-    @apply cursor-pointer
+
+.cm-s-tn .cm-strike{
+    @apply line-through
 }
-.CodeMirror-foldgutter-open:after {
-    content: "\25BE";
+.cm-s-tn .cm-date{
+    @apply bg-brown-light rounded px-1 text-cream
 }
-.CodeMirror-foldgutter-folded:after {
-    content: "\25B8";
+.cm-s-tn .cm-link {
+    @apply text-cream underline
 }

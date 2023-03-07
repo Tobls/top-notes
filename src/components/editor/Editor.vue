@@ -10,7 +10,7 @@
     import "@/assets/editortheme.css"
     import "codemirror/addon/selection/active-line.js"
     import "codemirror/mode/gfm/gfm.js"
-    import 'codemirror/addon/fold/foldcode.js';
+    import "@/components/editor/editormode"
     import 'codemirror/addon/fold/foldgutter.js';
     import 'codemirror/addon/fold/markdown-fold.js';
     import {onMounted, ref} from "vue";
@@ -27,11 +27,10 @@
             lineWrapping: true,
             scrollbarStyle: "null",
             styleActiveLine: { nonEmpty: true },
-            autoCloseBrackets: true,
             theme: "tn",
             foldGutter: true,
             gutters: ["CodeMirror-foldgutter"],
-            mode: "gfm"
+            mode: "tn"
         })
 
         cmEditor.on("changes", () => {
@@ -42,6 +41,8 @@
     function onContentChange(value) {
         const todoItems = (value.match(/\[[x ]]/g) || []).length
         const checkedTodoItems = (value.match(/\[x]/g) || []).length
+        const dateReferences = (value.match(/(0[0-9]|[12][0-9]|3[12]).(0[0-9]|1[12]).([12][0-9]{3})/g) || []).length
+        console.log(todoItems, checkedTodoItems, dateReferences)
     }
 
 </script>
