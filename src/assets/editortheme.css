@@ -1,5 +1,5 @@
 .cm-s-tn.CodeMirror {
-    @apply bg-light-brown h-full w-full text-white rounded-r
+    @apply bg-light-brown h-full w-full text-white rounded-r absolute inset-0 overflow-hidden
 }
 
 .cm-s-tn .CodeMirror-gutters {

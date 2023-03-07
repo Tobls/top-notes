@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-full">
+    <div class="relative w-full h-full">
         <textarea ref="editor" class="h-full w-full">{{ content }}</textarea>
     </div>
 </template>
@@ -28,7 +28,7 @@
         CodeMirror.fromTextArea(editor.value, {
             lineNumbers:  true,
             tabSize: 2,
-            lineWrapping: false,
+            lineWrapping: true,
             scrollbarStyle: "null",
             styleActiveLine: { nonEmpty: true },
             autoCloseBrackets: true,
