@@ -7,10 +7,13 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                "light-brown": "#2d241c",
-                "medium-brown": "#3c3022",
-                "dark-brown": "#1a120f",
-                "light-orange": "#DE541E"
+                "brown-light": "#3c3022",
+                "brown-medium": "#2d241c",
+                "brown-dark": "#1a120f",
+                "orange-strong": "#DE541E",
+                "cream": "#ffffb3",
+                "orange-light": "#d39054",
+                "blue-light": "#51a0ad"
             }
         },
     },

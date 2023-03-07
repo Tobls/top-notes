@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-12 rounded bg-light-brown flex flex-row">
+    <div class="w-full h-12 rounded bg-brown-medium flex flex-row">
         <AppIcon />
         <span class="text-4xl text-white">Top-Notes</span>
     </div>

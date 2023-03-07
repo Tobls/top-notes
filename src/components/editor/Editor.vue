@@ -25,7 +25,7 @@
     const editor = ref(null)
 
     onMounted(() => {
-        CodeMirror.fromTextArea(editor.value, {
+        const cmEditor = CodeMirror.fromTextArea(editor.value, {
             lineNumbers:  true,
             tabSize: 2,
             lineWrapping: true,
@@ -37,7 +37,17 @@
             gutters: ["CodeMirror-foldgutter"],
             mode: "gfm"
         })
+
+        cmEditor.on("changes", () => {
+            onContentChange(cmEditor.getValue())
+        })
     })
+
+    function onContentChange(value) {
+        const todoItems = (value.match(/\[[x ]]/g) || []).length
+        const checkedTodoItems = (value.match(/\[x]/g) || []).length
+    }
+
 </script>
 <style>
 

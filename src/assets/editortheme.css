@@ -1,11 +1,14 @@
 .cm-s-tn.CodeMirror {
-    @apply bg-light-brown h-full w-full text-white rounded-r absolute inset-0 overflow-hidden
+    @apply bg-brown-medium h-full w-full text-white rounded absolute inset-0 overflow-hidden pl-2
+}
+.cm-s-tn.CodeMirror {
+    font-family: "Fira Code", monospace;
 }
 
 .cm-s-tn .CodeMirror-gutters {
-    @apply bg-light-brown rounded-none border-0
+    @apply bg-brown-medium rounded-none border-0
 }
-.cm-s-tn .CodeMirror-linenumber { @apply text-white }
+.cm-s-tn .CodeMirror-linenumber { @apply text-cream }
 
 .cm-s-tn .CodeMirror-cursor { @apply border-white }
 
@@ -23,36 +26,35 @@
 
 .cm-s-tn .CodeMirror-selected,
 .cm-s-tn.CodeMirror-focused .CodeMirror-selected {
-    @apply bg-medium-brown
+    @apply bg-white/10
 }
 .cm-s-tn .CodeMirror-line::selection,
 .cm-s-tn .CodeMirror-line > span::selection,
 .cm-s-tn .CodeMirror-line > span > span::selection {
-    @apply bg-medium-brown
+    @apply bg-white/10
 }
 
 .cm-s-tn .CodeMirror-activeline-background {
-    @apply bg-medium-brown rounded-r
+    @apply bg-brown-light rounded-r
 }
 .cm-s-tn .CodeMirror-activeline-gutter {
-    @apply bg-medium-brown rounded-l
+    @apply bg-brown-light rounded-l
 }
 
 .cm-s-tn .CodeMirror-line::-moz-selection,
 .cm-s-tn .CodeMirror-line > span::-moz-selection,
 .cm-s-tn .CodeMirror-line > span > span::-moz-selection {
-    @apply bg-medium-brown
+    @apply bg-brown-light
 }
 
 .cm-s-tn .cm-meta {
-    @apply text-red-600
+    @apply text-orange-light
 }
 
 .cm-s-tn .cm-property {
-    @apply text-green-600
+    @apply text-blue-light
 }
 
-.cm-s-tn .cm-strong { font-size: 170%; }
 .cm-s-tn .cm-header-1 { font-size: 160%; }
 .cm-s-tn .cm-header-2 { font-size: 150%; }
 .cm-s-tn .cm-header-3 { font-size: 140%; }
@@ -60,11 +62,15 @@
 .cm-s-tn .cm-header-5 { font-size: 120%; }
 .cm-s-tn .cm-header-6 { font-size: 110%; }
 
+.cm-s-tn .cm-header {
+    @apply mr-2
+}
+
 .cm-s-tn .cm-strong, .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6 {
-    @apply text-light-orange
+    @apply text-orange-strong
 }
 .CodeMirror-foldmarker {
-    @apply text-light-orange cursor-pointer leading-6
+    @apply text-white cursor-pointer leading-6 pb-1 text-2xl
 }
 .CodeMirror-foldgutter {
     width: .7em;
@@ -74,7 +80,6 @@
     @apply cursor-pointer
 }
 .CodeMirror-foldgutter-open:after {
-    padding-left: 0.5rem;
     content: "\25BE";
 }
 .CodeMirror-foldgutter-folded:after {

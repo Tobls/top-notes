@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full bg-light-brown rounded sm:w-96 sm:relative absolute inset-0 z-10 transition-all" :class="getStyleVisible()">
+    <div class="h-full bg-brown-medium rounded sm:w-96 sm:relative absolute inset-0 z-10 transition-all" :class="getStyleVisible()">
 
     </div>
 </template>
