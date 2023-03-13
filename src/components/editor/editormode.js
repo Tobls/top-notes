@@ -14,7 +14,6 @@ Codemirror.defineSimpleMode("tn", {
         {regex: /_.*_/, token: "cursive"},
         {regex: /\*.*\*/, token: "bold"},
         {regex: /~.*~/, token: "strike"},
-        {regex: /(0[0-9]|[12][0-9]|3[12])\.(0[0-9]|1[12])\.([12][0-9]{3})/, token: "date"},
         {regex: /(http(s?):\/\/|www\.).*\.\w+/, token: "link"}
     ]
 })

@@ -14,10 +14,12 @@
     import 'codemirror/addon/fold/foldgutter.js';
     import 'codemirror/addon/fold/markdown-fold.js';
     import {onMounted, ref} from "vue";
+    import {useI18n} from "vue-i18n";
 
     const props = defineProps({
         content: String
     })
+    const { t } = useI18n()
     const editor = ref(null)
 
     onMounted(() => {
@@ -36,18 +38,15 @@
         cmEditor.on("changes", () => {
             onContentChange(cmEditor.getValue())
         })
+
+        onContentChange(props.content)
     })
 
     function onContentChange(value) {
         const todoItems = (value.match(/\[[x ]]/g) || []).length
         const checkedTodoItems = (value.match(/\[x]/g) || []).length
-        const dateReferences = (value.match(/(0[0-9]|[12][0-9]|3[12]).(0[0-9]|1[12]).([12][0-9]{3})/g) || []).length
-        console.log(todoItems, checkedTodoItems, dateReferences)
+
+        console.log(todoItems, checkedTodoItems)
     }
 
 </script>
-<style>
-
-
-
-</style>

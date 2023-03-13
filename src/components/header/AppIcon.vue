@@ -1,13 +1,13 @@
 <template>
-    <a @click="toggleSidebar" class="relative h-full w-12 cursor-pointer select-none transition-all">
+    <a @click="toggleSidebar" class="relative h-full mt-1 w-12 cursor-pointer select-none transition-all">
         <div class="absolute inset-0">
-            <v-icon name="fa-sticky-note" scale="2" fill="#e47b19"/>
+            <v-icon name="fa-sticky-note" scale="1.75" fill="#e47b19"/>
         </div>
         <div class="absolute inset-0 left-1 top-1">
-            <v-icon name="fa-sticky-note" scale="2" fill="#4fa52b"/>
+            <v-icon name="fa-sticky-note" scale="1.75" fill="#4fa52b"/>
         </div>
         <div class="absolute inset-0 left-2 top-2">
-            <v-icon name="fa-sticky-note" scale="2" fill="#e33f3b"/>
+            <v-icon name="fa-sticky-note" scale="1.75" fill="#e33f3b"/>
         </div>
     </a>
 </template>
