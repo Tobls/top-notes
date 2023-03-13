@@ -1,6 +1,6 @@
 <template>
-    <button>
-        <v-icon name="bi-trash-fill" scale="1.5" fill="#ffffff"></v-icon>
+    <button class="text-white hover:text-cream hover:scale-125">
+        <v-icon name="bi-trash-fill" scale="1.5"></v-icon>
     </button>
 </template>
 
